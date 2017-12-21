@@ -2,6 +2,8 @@ package com.xproject.util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
 
 
@@ -33,13 +35,11 @@ public class TestThread implements Runnable{
         for(String base: engines) {
 
             String url = base + question;
-            WS.url
             result.compareAndSet(null, url);
         }
 
-        while(result.get() == null) {
-            System.out.println(Thread.currentThread().getName());
-        }
+        while(result.get() == null);
+        System.out.println(Thread.currentThread().getName() + result.get().toString());
     }
 }
 
@@ -60,8 +60,8 @@ class MyThread {
         Thread thread1 = new Thread(testThread1);
         Thread thread2 = new Thread(testThread2);
 
-            thread1.start();
-            thread2.start();
+        thread1.start();
+        thread2.start();
 
 
 
