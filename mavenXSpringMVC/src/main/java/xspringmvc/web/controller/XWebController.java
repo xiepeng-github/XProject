@@ -1,16 +1,14 @@
-package com.xproject.controller;
+package xspringmvc.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import static org.springframework.web.bind.annotation.RequestMethod.*;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class XWebController {
 
-    @RequestMapping(value = "/a", method = GET)
+    @RequestMapping(value = "index", method = RequestMethod.GET)
     public String index() {
-
         return "index";
     }
 }

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mavenXSpringMVC:war exploded">
+    <output-path>$PROJECT_DIR$/mavenXSpringMVC/target/maven-XSpringMVC</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mavenXSpringMVC" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.13.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.13.RELEASE" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/mavenXSpringMVC/target/maven-XSpringMVC/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/mavenXSpringMVC/src/main/webapp" />
+    </root>
+  </artifact>
+</component>
