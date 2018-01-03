@@ -4,11 +4,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import xspringmvc.web.interceptor.UserSecurityInterceptor;
+
 /*
 对应dispatcher-servlet.xml的配置
  */
@@ -34,6 +33,14 @@ public class XWebConfig extends WebMvcConfigurerAdapter {
         resolver.setExposeContextBeansAsAttributes(true);
         return resolver;
 
+    }
+
+    /*
+    配置拦截器
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry){
+        registry.addInterceptor(new UserSecurityInterceptor()).addPathPatterns("/index");
     }
 
     /*
