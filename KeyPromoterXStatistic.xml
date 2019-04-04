@@ -54,7 +54,7 @@
           <IdeaActionID>ShowProjectStructureSettings</IdeaActionID>
           <ShortCut>'Ctrl+Alt+Shift+S'</ShortCut>
           <Description>Project Structure...</Description>
-          <Count>4</Count>
+          <Count>5</Count>
         </Item>
       </Statistic>
       <Statistic Action="Refresh">
@@ -70,7 +70,7 @@
           <IdeaActionID>ShowSettings</IdeaActionID>
           <ShortCut>'Ctrl+Alt+S'</ShortCut>
           <Description>Settings...</Description>
-          <Count>10</Count>
+          <Count>12</Count>
         </Item>
       </Statistic>
       <Statistic Action="Structure">
@@ -79,6 +79,14 @@
           <ShortCut>'Alt+7'</ShortCut>
           <Description>Structure</Description>
           <Count>14</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Toggle Line Breakpoint">
+        <Item>
+          <IdeaActionID>ToggleLineBreakpoint</IdeaActionID>
+          <ShortCut>'Ctrl+F8'</ShortCut>
+          <Description>Toggle Line Breakpoint</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
     </option>
